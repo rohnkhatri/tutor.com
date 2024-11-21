@@ -1,0 +1,28 @@
+[data-theme="dark"] {
+    --primary-color: #2196F3;
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --card-background: #1E1E1E;
+    --shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] header {
+    background-color: #1E1E1E;
+    border-bottom: 1px solid #333;
+}
+
+[data-theme="dark"] .card {
+    background-color: #2D2D2D;
+    border: 1px solid #333;
+}
+
+[data-theme="dark"] input,
+[data-theme="dark"] select {
+    background-color: #333;
+    color: #ffffff;
+    border: 1px solid #444;
+}
+
+[data-theme="dark"] .theme-icon {
+    content: "☀️";
+} 

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutor.com - Online Tutoring Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Tutor.com</h1>
+        </div>
+        <button id="theme-toggle" aria-label="Toggle dark mode">
+            <span class="theme-icon">🌙</span>
+        </button>
+    </header>
+
+    <main>
+        <section id="landing-section" class="section">
+            <h2>Welcome to Tutor.com</h2>
+            <div class="option-cards">
+                <div class="option-card" data-section="teachers-section">
+                    <div class="option-icon">👩‍🏫</div>
+                    <h3>Teachers</h3>
+                    <p>Find qualified tutors for your subjects</p>
+                </div>
+                <div class="option-card" data-section="students-section">
+                    <div class="option-icon">👨‍🎓</div>
+                    <h3>Students</h3>
+                    <p>View student profiles and rankings</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="teachers-section" class="section hidden">
+            <button class="back-button">← Back to Home</button>
+            <h2>Our Teachers</h2>
+            <div class="filters">
+                <div class="filter-group">
+                    <input type="text" id="teacher-search" placeholder="Search teachers...">
+                </div>
+                <div class="filter-group">
+                    <div class="expertise-filter">
+                        <select id="expertise-select">
+                            <option value="">All Subjects</option>
+                            <option value="data structures">Data Structures</option>
+                            <option value="algorithms">Algorithms</option>
+                            <option value="web development">Web Development</option>
+                            <option value="html/css">HTML/CSS</option>
+                            <option value="machine learning">Machine Learning</option>
+                            <option value="python">Python</option>
+                            <option value="database systems">Database Systems</option>
+                            <option value="sql">SQL</option>
+                            <option value="operating systems">Operating Systems</option>
+                            <option value="c++">C++</option>
+                            <option value="computer networks">Computer Networks</option>
+                            <option value="cybersecurity">Cybersecurity</option>
+                            <option value="artificial intelligence">Artificial Intelligence</option>
+                            <option value="java">Java</option>
+                            <option value="mobile app development">Mobile App Development</option>
+                            <option value="kotlin">Kotlin</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <input type="number" id="experience-input" min="0" placeholder="Min. years of experience">
+                </div>
+                <button id="clear-filters" class="clear-filters-btn">
+                    Clear Filters
+                </button>
+            </div>
+            <div class="teachers-grid" id="teachers-container"></div>
+            <div id="teacher-details-container" class="hidden"></div>
+            <div id="booking-form-container" class="hidden"></div>
+        </section>
+
+        <section id="students-section" class="section hidden">
+            <button class="back-button">← Back to Home</button>
+            <h2>Our Students</h2>
+            <div class="filters">
+                <div class="filter-group">
+                    <input type="text" id="student-search" placeholder="Search students...">
+                </div>
+            </div>
+            <div class="students-grid" id="students-container"></div>
+            <div class="leaderboard" id="leaderboard">
+                <h3>Leaderboard</h3>
+                <div class="leaderboard-list"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 Your Company. All rights reserved.</p>
+    </footer>
+
+    <script src="js/models.js"></script>
+    <script src="js/teachers.js"></script>
+    <script src="js/students.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
